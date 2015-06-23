@@ -27,14 +27,22 @@
             JACK LOTKOWSKI
         .collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-left
-            %li.active
-              =link 'Home', "index"
+            - if current_page == './src/index.haml'
+              %li.active
+                =link 'Home', "index"
+            - else
+              %li
+                =link 'Home', "index"
             %li
               =link 'Blog', "#"
             %li
               =link 'Projects', "#"
-            %li
-              =link 'About', "#"
+            - if current_page == './src/about.haml'
+              %li.active
+                =link 'About', "about"
+            - else
+              %li
+                =link 'About', "about"
           %ul.navbar-right.nav.navbar-nav#social
             %li
               %a{href: "https://www.linkedin.com/in/jacklot", 'data-toggle': "tooltip", 'data-placement': "bottom", 'title': "LinkedIn"}
@@ -45,12 +53,4 @@
             %li
               %a{href: "https://github.com/JackLot", 'data-toggle': "tooltip", 'data-placement': "bottom", 'title': "GitHub"}
                 %i.fa.fa-github
-    .section.bg-1
-      #jumbo-tron-gradient
-      .container#jumbo-tron
-        .row
-          //Jumbotron content goes here
-
-    #content-gradient
-    .container
-      = yield
+    = yield
