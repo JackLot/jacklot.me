@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  {% haml head.haml %}
+  <body>
+    <nav class='navbar navbar-inverse navbar-fixed-top'>
+      <div class='container'>
+        <div class='navbar-header'>
+          <button class='navbar-toggle'>
+            <span class='sr-only'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='navbar-brand' href="{{ site.baseurl }}/"/>
+            JACK LOTKOWSKI
+          </a>
+        </div>
+        <div class='collapse navbar-collapse'>
+          <ul class='nav navbar-nav navbar-left'>
+            <li class='active'>
+              <a href='/'>Home</a>
+            </li>
+            <li>
+              <a href='/blog'>Blog</a>
+            </li>
+            <li>
+              <a href='/projects'>Projects</a>
+            </li>
+            <li>
+              <a class="page-link" href="{{ site.baseurl }}/about">About</a>
+            </li>
+          </ul>
+          <ul class='navbar-right nav navbar-nav' id='social'>
+            <li>
+              <a href='"https://www.linkedin.com/in/jacklot"'>
+                <i class='fa fa-linkedin-square'></i>
+              </a>
+            </li>
+            <li>
+              <a href='https://twitter.com/Geektaculous'>
+                <i class='fa fa-twitter'></i>
+              </a>
+            </li>
+            <li>
+              <a href='https://github.com/JackLot'>
+                <i class='fa fa-github'></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {{ content }}
+    {% haml footer.haml %}
+  </body>
+</html>

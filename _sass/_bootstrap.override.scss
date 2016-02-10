@@ -1,0 +1,59 @@
+.navbar-inverse{
+  border-width: 0px;
+  border-bottom: 2px solid #e5e5e5;
+
+  .nav .navbar-nav{
+
+  }
+
+  .navbar-brand{
+    color: #D8D8D8;
+    font-family: Raleway;
+    font-weight: 600;
+  }
+
+  .navbar-nav > li > a:hover{
+    border-bottom: 4px solid #e5e5e5;
+    padding-bottom: 11px;
+  }
+
+  .navbar-nav > .active > a{
+    background-color: #222222;
+
+    border-bottom: 4px solid #e5e5e5;
+    padding-bottom: 11px;
+
+    &:hover{
+      border-bottom: 4px solid #e5e5e5;
+      padding-bottom: 11px;
+      background-color: #222222;
+    }
+  }
+
+  #social{
+    li a{
+      color: #D8D8D8;
+      padding-right: 10px;
+      padding-left: 10px;
+      font-size: 18px;
+      line-height: 20px;
+      &:hover{
+        color: white;
+        padding-bottom: 13px;
+      }
+    }
+  }
+}
+
+h3{
+  font-family: Raleway;
+}
+
+hr{
+  border-color: #D5D5D5;
+}
+
+hr.below-header{
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
