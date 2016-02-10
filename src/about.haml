@@ -1,0 +1,41 @@
+.section.bg-about
+  #jumbo-tron-gradient
+  .container#jumbo-tron
+    .row
+      //Jumbotron content goes here
+
+#content-gradient
+.container
+  .row
+    .col-md-3#profile_pic_col
+      .pentagon#profile_pic
+        = img "profile_pic.jpg", class: "img-thumbnail"
+      %ul.list-unstyled#about-links
+        %li
+          %a.btn.btn-default.btn-block{href: "https://www.linkedin.com/in/jacklot"}
+            %i.fa.fa-linkedin-square
+            &nbsp;LinkedIn
+        %li
+          %a.btn.btn-default.btn-block{href: "https://twitter.com/Geektaculous"}
+            %i.fa.fa-twitter
+            &nbsp;Twitter
+        %li
+          %a.btn.btn-default.btn-block{href: "https://github.com/JackLot"}
+            %i.fa.fa-github
+            &nbsp;Github
+        %li
+          %br/
+          %a{href: "mailto:jacklotkowski@gmail.com"}
+            %i.fa.fa-envelope-o
+            &nbsp;JackLotkowski@gmail.com
+
+    .col-md-9#about-me-holder
+      %h2.header Brief Bio
+      %hr.below-header
+      %h4.description
+        I've recently graduated from the University of Maryland with a degree in Computer Science and I'll be moving to Seattle, WA to start full-time at Amazon.com. In addition to various programming interests I completed a concentration in busienss management and captioned Solar Flair, the developmental ultimate frisbee team at Maryland. Recently, billiards has been my hobby, along with a couple side projects.
+        %br/
+        %br/
+      %h2.header Experience
+      %hr.below-header
+      = partial 'resume_card'

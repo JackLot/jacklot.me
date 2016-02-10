@@ -1,0 +1,47 @@
+.section.bg-home
+  #jumbo-tron-gradient
+  .container#jumbo-tron
+    .row
+      //Jumbotron content goes here
+
+#content-gradient
+.container
+
+  .row#homepage-features
+    .col-md-8#featured-projects
+      %a.pull-right#view-more{href: "#"}
+        //View more projects
+        //%i.fa.fa-angle-double-right
+      %h3 Recent projects
+      %hr.below-header
+      .row.tiles
+        .col-md-6
+          .panel.panel-default
+            /.img-top-caption
+            /NewsStand: Reading news with maps
+            %a.tile{href: "#"}
+              = img "p1_thumb.jpg"
+              .details
+                %span.title NewsStand
+                %span.info Reading news with maps
+                /%i.fa.fa-search
+                /View more info
+                /&nbsp;&nbsp;&nbsp;
+                /%i.fa.fa-external-link
+                /Live site
+        .col-md-6
+          .panel.panel-default
+            /.img-top-caption
+            /UMDEvents: Campus events service
+            %a.tile{href: "#"}
+              = img "p2_thumb.jpg"
+              .details
+                %span.title UMD Events
+                %span.info Ruby on Rails campus events web application
+    .col-md-4
+      %h3 Latest from the blog
+      %hr.below-header
+      .panel.panel-default
+        TEST
+
+  = partial 'example'
