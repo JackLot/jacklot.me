@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Jack Lotkowski</title>
+    <link rel='stylesheet' href='styles.css'>
+  </head>
+  <body>
+    <a href='about.html' id='white-box'>
+      <div id='website-title'>> Jack Lotkowski</div>
+    </a>
+    <div class='main'>
+      <div id='info'>
+        <a href='https://www.themoderncoder.com'>> blog</a><br />
+        <a href='https://github.com/JackLot'>> projects</a><br />
+      </div>
+    </div>
+    <script type='text/javascript'>
+
+      // Get existing DOM elements
+      var whitebox = document.getElementById('white-box')
+      var info = document.getElementById('info')
+      var rect1 = info.getBoundingClientRect()
+      var sw = screen.width
+      var dotmodifier = sw < 750 ? 1.5 : 1
+
+      // Generate BG dots
+      for (var i = 0; i < 50*dotmodifier; i++) {
+        var div = document.createElement('div')
+        var wh = (Math.floor(Math.random() * 6) + 1) == 1 ? 2 : 1
+        div.className = 'white-dot'
+        div.style.top = Math.random()*100 + '%'
+        div.style.left = Math.random()*100 + '%'
+        div.style.opacity = Math.random()
+        div.style.width = wh*dotmodifier
+        div.style.height= wh*dotmodifier
+        document.body.appendChild(div)
+      }
+
+      // Regenerate the position of the white box if it overlaps
+      // with the nav links. Cap retries instead of using while(true)
+      for (var i = 0; i < 5; i++) {
+        whitebox.style.top = Math.random()*90 + '%'
+        whitebox.style.left = Math.random()*80 + '%'
+
+        var rect2 = whitebox.getBoundingClientRect()
+
+        var overlap = !(rect1.right < rect2.left ||
+                        rect1.left > rect2.right ||
+                        rect1.bottom < rect2.top ||
+                        rect1.top > rect2.bottom)
+
+        if (overlap == false) { break }
+        console.log('overlap detected, regenerating white box position')
+      }
+
+      if (sw < 750) {
+        whitebox.style.top = '50%'
+        whitebox.style.left = '35%'
+      }
+
+      // Generate white box dots
+      for (var i = 0; i < 75*dotmodifier; i++) {
+        var div = document.createElement('div')
+        var wh = (Math.floor(Math.random() * 7) + 1) == 1 ? 2 : 1
+        div.className = 'black-dot'
+        div.style.top = Math.random()*100 + '%'
+        div.style.left = Math.random()*100 + '%'
+        div.style.opacity = Math.random()
+        div.style.width = wh*dotmodifier
+        div.style.height= wh*dotmodifier
+        whitebox.appendChild(div)
+      }
+
+    </script>
+  </body>
+</html>

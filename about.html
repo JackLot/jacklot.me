@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Jack Lotkowski</title>
+    <link rel='stylesheet' href='styles.css'>
+  </head>
+  <body id='about-body'>
+    <div class='about-main'>
+      <a id='go-home' href='index.html'>< Go Home</a>
+      <div id='about-info'>
+        <img id='profile-pic' src='profile_pic.jpg' />
+        <p>Former software engineer. Presently a software development manager at Amazon in NYC.</p>
+        <a href='https://www.linkedin.com/in/jacklot/'>> LinkedIn</a><br />
+      </div>
+    </div>
+    <script type='text/javascript'>
+      var dotmodifier = screen.width < 750 ? 1.5 : 1
+
+      // Generate BG dots
+      for (var i = 0; i < 100*dotmodifier; i++) {
+        var div = document.createElement('div')
+        var wh = (Math.floor(Math.random() * 6) + 1) == 6 ? 2 : 1
+        div.className = 'black-dot'
+        div.style.top = Math.random()*100 + '%'
+        div.style.left = Math.random()*100 + '%'
+        div.style.opacity = Math.random()
+        div.style.width = wh*dotmodifier
+        div.style.height= wh*dotmodifier
+        document.body.appendChild(div)
+      }
+    </script>
+  </body>
+</html>

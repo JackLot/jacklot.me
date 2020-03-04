@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1b1d2d;
+  color: #fff;
+  font-family: "Iosevka","Helvetica Neue","Helvetica","Arial","sans-serif";
+  overflow: hidden;
+}
+
+body#about-body {
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#info {
+  margin-left: 10%;
+  margin-top: 8%;
+  font-weight: 200;
+  font-size: 5rem;
+  position: absolute;
+}
+
+#info a {
+  display: inline-block;
+  color: white;
+  padding: 50px;
+  transition: left 0.1s;
+  left: 0;
+}
+
+#info a:hover {
+  position: relative;
+  left: 5px;
+}
+
+#white-box {
+  background-color: #fff;
+  width: 65%;
+  height: 25%;
+  position: absolute;
+  z-index: 2;
+}
+
+#white-box #website-title {
+  color: #1b1d2d;
+  font-weight: 200;
+  margin: 5px 0 0 8px;
+  position: relative;
+  left: 0;
+  transition: left 0.1s;
+  font-size: 4rem;
+  padding: 10px 20px;
+}
+
+#white-box:hover #website-title {
+  left: 5px;
+}
+
+.white-dot {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  background: #fff;
+  margin: auto;
+  z-index: 1;
+}
+
+.black-dot {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  background: #1b1d2d;
+  margin: auto;
+  z-index: 3;
+}
+
+.about-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-main a {
+  color: #1b1d2d;
+  position: relative;
+  left: 0;
+  transition: left 0.1s;
+  padding: 20px;
+  display: inline-block;
+}
+
+.about-main a:hover {
+  left: 5px;
+}
+
+#about-info {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;
+}
+
+#about-info p {
+  color: #1b1d2d;
+  text-align: center;
+  font-weight: 200;
+}
+
+#go-home {
+  position: absolute;
+  top: 0;
+  padding: 10%;
+  font-size: 3rem;
+}
+
+#profile-pic {
+  width: 35%;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+/* Overides when the screen is larger than 750 */
+@media only screen and (min-device-width: 750px) {
+  #info {
+    font-size: 1.3rem;
+  }
+
+  #info a {
+    padding: 20px;
+  }
+
+  #white-box {
+    width: 30%;
+    height: 20%;
+  }
+
+  #white-box #website-title {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  #go-home {
+    padding: 5%;
+    font-size: 1.1rem;
+  }
+
+  #about-info {
+    width: 30%;
+  }
+
+  #profile-pic {
+    width: 30%;
+    max-width: 120px;
+  }
+
+  #about-info {
+    font-size: 1.1rem;
+  }
+
+  #about-info p {
+    min-width: 400px;
+  }
+}
